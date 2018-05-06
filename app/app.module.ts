@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
+import { FavoriteService } from './services/favorite.service';
 
 import { baseURL } from './shared/baseurl';
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -52,6 +53,7 @@ import { baseURL } from './shared/baseurl';
         DishService,
         LeaderService,
         PromotionService,
+        FavoriteService,
         ProcessHTTPMsgService
     ],
     schemas: [
