@@ -7,7 +7,7 @@
         </StackLayout>
     </ScrollView>
     <StackLayout tkMainContent class="page">
-        <ListView [items]="dishes" class="list-group" *ngIf="dishes">
+        <ListView [items]="dishes" class="list-group" *ngIf="dishes" item-height="200">
             <ng-template let-dish="item">
                 <StackLayout orientation="horizontal" class="list-group-item" [nsRouterLink]="['/dishdetail', dish.id]">
                     <Image row="0" col="0" rowSpan="2" height="108" width="108"  [src]="BaseURL + dish.image" class="thumb p-16"></Image>

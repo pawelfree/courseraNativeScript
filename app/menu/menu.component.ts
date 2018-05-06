@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, ChangeDetectorRef } from '@angular/core';
 import { Dish } from '../shared/dish';
 import { DishService } from '../services/dish.service';
 import { DrawerPage } from '../shared/drawer/drawer.page';
+import { ObservableArray } from 'tns-core-modules/data/observable-array';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +11,8 @@ import { DrawerPage } from '../shared/drawer/drawer.page';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent extends DrawerPage implements OnInit {
-  dishes: Dish[];
+  
+  dishes: ObservableArray<Dish>;
 
   errMess: string;
 
@@ -22,7 +24,7 @@ export class MenuComponent extends DrawerPage implements OnInit {
   
   ngOnInit() {
     this.dishService.getDishes()
-    .subscribe(dishes => this.dishes = dishes,
+    .subscribe(dishes => this.dishes = new ObservableArray(dishes),
       errmess => this.errMess = <any>errmess);
   }
 
