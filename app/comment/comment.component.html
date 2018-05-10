@@ -1,0 +1,12 @@
+<StackLayout class="modal-view-style">
+    <GridLayout class="m-5" rows="auto auto auto auto" columns="* *" >
+        <Label class="h3 m-15" row="0" col="0" text="Your name"></Label>
+        <TextField row="0" col="1" id="author"></TextField>
+        <Label class="h3 m-15" row="1" col="0" text="Rating"></Label>
+        <Slider row="1" col="1" id="rating" value="1" minValue="1" maxValue="5"></Slider>
+        <Label class="h3 m-15" row="2" col="0" text="Your comment" ></Label>
+        <TextField row="2" col="1" id="comment"></TextField>
+        <Button class="btn btn-primary btn-active m-15" row="3" col="0"
+            text="Submit" (tap)="submit()"></Button>
+    </GridLayout>
+</StackLayout>
