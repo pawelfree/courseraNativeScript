@@ -17,6 +17,10 @@
                 <Label row="4" col="0" text="Tel: +852 1234 5678" class="m-l-20 list-group-item-text"></Label> 
                 <Label row="5" col="0" text="Fax: +852 8765 4321" class="m-l-20 list-group-item-text"></Label> 
                 <Label row="6" col="0" text="Email:confusion@food.net" class="m-l-20 list-group-item-text"></Label> 
+                <GridLayout orientation="horizontal" rows="*" columns="*, *" class="m-t-20">
+                    <Button row="0" col="0" [text]="('fa-phone' | fonticon) + ' Call'" class="btn btn-rounded-sm btn-outline no-border fa "></Button>
+                    <Button row="0" col="1" [text]="('fa-envelope-o' | fonticon) + ' Email'" class="btn btn-rounded-sm btn-outline no-border fa" (tap)="sendEmail()"></Button>
+                </GridLayout> 
         </StackLayout>
     </StackLayout>
 </RadSideDrawer>

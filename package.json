@@ -25,6 +25,8 @@
 		"font-awesome": "^4.7.0",
 		"nativescript-angular": "~5.3.0",
 		"nativescript-couchbase": "^1.0.18",
+		"nativescript-email": "^1.5.1",
+		"nativescript-local-notifications": "^2.0.3",
 		"nativescript-ngx-fonticon": "^4.1.0",
 		"nativescript-theme-core": "~1.0.4",
 		"nativescript-toasty": "^1.1.5",
