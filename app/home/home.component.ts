@@ -58,6 +58,7 @@ export class HomeComponent extends DrawerPage implements OnInit {
       .subscribe(leader => this.leader = leader,
         errmess => this.leaderErrMess = <any>errmess );
   }
+  
   onSwipe(args: SwipeGestureEventData) {
     console.log("Swipe Direction: " + args.direction);
 
